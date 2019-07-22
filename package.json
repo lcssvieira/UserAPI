@@ -1,12 +1,19 @@
 {
   "name": "userapi",
   "version": "1.0.0",
-  "description": "API to register and update users",
-  "main": "index.js",
+  "description": "API to register, consult and update users",
+  "main": "dist/main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Lucas Vieira",
   "license": "ISC",
-  "dependencies": {}
+  "dependencies": {
+    "mongoose": "^4.13.9",
+    "restify": "6.3.4"
+  },
+  "devDependencies": {
+    "@types/mongoose": "4.7.32",
+    "@types/restify": "^5.0.6"
+  }
 }

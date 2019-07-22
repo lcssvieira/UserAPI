@@ -1,7 +1,7 @@
-namespace UserAPI.Model {
+import mongoose from "mongoose";
 
-    export declare class BaseModel {
-        Id: string;
-        Created: Date;
-    }
+export interface BaseModel extends mongoose.Document {
+    created: string;
 }
+
+
