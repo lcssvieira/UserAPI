@@ -1,7 +1,7 @@
 import * as restify from "restify";
 
 export abstract class RouterBase {
-    public abstract ApplyRouters(application: restify.Server);
+    abstract applyRouters(application: restify.Server): any;
 }
 
 
