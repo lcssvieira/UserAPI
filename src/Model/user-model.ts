@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import { BaseModel } from "./BaseModel";
+import { BaseModel } from "./base-model";
 
 
 export interface UserModel extends BaseModel {
@@ -7,6 +7,7 @@ export interface UserModel extends BaseModel {
     familyName: string;
     email: string;
 }
+
 export const UserSchema = new mongoose.Schema({
     givenName: {
         type: "String"
