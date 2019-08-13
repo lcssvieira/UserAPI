@@ -1,8 +1,12 @@
-import {Server} from "./Server/Server";
-import { RouterBase } from "./Routers/RouterBase";
-import { userRouter } from "./Routers/UserRouters";
+import {Server} from "./Server/server";
+import { RouterBase } from "./Routers/router-base";
+import { userRouter } from "./Routers/user-routers";
 
 const routers: RouterBase[] = [userRouter];
+/**
+ * @author Lucas Vieira <lcssvieira@gmail.com>
+ * @description Function that initializes the application
+ */
 async function startAPI(){
     try {
         const server = new Server();
