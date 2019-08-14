@@ -36,4 +36,4 @@ Docker is used to run the application in "production mode" to guarantee it works
 
 ` npm test `
 
-*Warning*: You MongoDb must be running to make it work correctly
+*Warning*: MongoDb service must be running to make it work correctly
