@@ -7,6 +7,7 @@ Node.js Application to register, find, delete and update users
 - Node v10.16.0
 - Docker v18.09.2
 - MongoDB v4.0
+- Typescript v2.6.2
 
 The application has been written in Node.js with Restify framework and Mongodb as database.
 
@@ -14,18 +15,25 @@ Docker is used to run the application in "production mode" to guarantee it works
 
 # How to use it
 
-## Installing dependencies
+### 1) Install the dependencies
 
 `npm install `
 
-## Building the application
+### 2) Build typescript and docker-compose
 
-` npm build `
+` npm run build `
 
-## Starting the application
+### 3) Start the application
 
 ` npm start `
 
-## Running all tests
+### 4) Use the following postman collection
+
+[Postman collection](https://drive.google.com/open?id=1u0lVxX0jt-llWpftV_Tg6-XA3p_uNeA3)
+
+
+# Running Integration Tests
 
 ` npm test `
+
+*Warning*: You MongoDb must be running to make it work correctly
