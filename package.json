@@ -1,0 +1,43 @@
+{
+  "name": "userapi",
+  "version": "1.0.0",
+  "description": "API to register, consult and update users",
+  "main": "dist/main.js",
+  "scripts": {
+    "test": "jest",
+    "build": "tsc & docker-compose build",
+    "start": "docker-compose up"
+  },
+  "author": "Lucas Vieira",
+  "license": "ISC",
+  "jest": {
+    "testEnvironment": "node",
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ]
+  },
+  "dependencies": {
+    "mongoose": "^4.13.9",
+    "restify": "6.3.4",
+    "uuid": "^3.3.2"
+  },
+  "devDependencies": {
+    "@types/jest": "^22.1.2",
+    "@types/mongoose": "4.7.32",
+    "@types/restify": "^5.0.8",
+    "@types/supertest": "^2.0.4",
+    "jest": "^22.4.2",
+    "supertest": "^3.0.0",
+    "ts-jest": "^22.0.4",
+    "typescript": "^2.6.2"
+  }
+}
