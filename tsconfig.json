@@ -6,5 +6,6 @@
     "esModuleInterop": true ,
     "strict": true,
     "allowSyntheticDefaultImports": true,
-  }
+  },
+  "exclude": ["**/*.test.ts"]
 }

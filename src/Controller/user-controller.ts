@@ -1,6 +1,6 @@
 import { UserModel } from "../Model/user-model";
 import { BaseController } from "./base-controller";
-import assert = require("assert");
+import assert from 'assert';
 import { UserDAO } from "../DAO/user-dao";
 import {Request, Response, Next}  from "restify";
 import { environment } from "../Common/environment";
@@ -10,7 +10,7 @@ export class UserController extends BaseController {
     private _dao: UserDAO;
     constructor() {
         super();
-        this._dao = new UserDAO;
+        this._dao = new UserDAO();
     }
 
     /**

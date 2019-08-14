@@ -9,8 +9,6 @@ export class UserDAO extends BaseDAO {
         super();
         this._userDocument =  mongoose.model<Model.UserModel>("User", Model.UserSchema);
     }
-
-    
     /**
      * @author Lucas Vieira <lcssvieira@gmail.com>
      * @description Get a specific user from the database
@@ -76,6 +74,25 @@ export class UserDAO extends BaseDAO {
      */
     async delete(id: string): Promise<any>{
         const query = this._userDocument.remove({_id: id});
+        return await query.exec();
+    }
+    
+    /**
+     * @author Lucas Vieira <lcssvieira@gmail.com>
+     * @description Delete an user from the database by email
+     * @param id Unique Identifier of the user to be deleted
+     */
+    async deleteByEmail(email: string): Promise<any>{
+        const query = this._userDocument.remove({email: email});
+        return await query.exec();
+    }
+
+    /**
+     * @author Lucas Vieira <lcssvieira@gmail.com>
+     * @description Delete all users
+     */
+    async deleteAll(): Promise<any>{
+        const query = this._userDocument.deleteMany({});
         return await query.exec();
     }
 }

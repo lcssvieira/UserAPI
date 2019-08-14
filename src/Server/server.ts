@@ -23,8 +23,10 @@ export class Server {
      * @author Lucas Vieira <lcssvieira@gmail.com>
      * @description Initialize routers and return the server app
      * @param routers List of Routers to be initialized with the web server
+     * @param port Application port
      */
-    async setup(routers: RouterBase[] = []){
+    async setup(routers: RouterBase[] = [], port?: number){
+        this._port = port || this._port
         await this.initServer(routers);
         return this;
     }
@@ -32,10 +34,12 @@ export class Server {
     /**
      * @author Lucas Vieira <lcssvieira@gmail.com>
      * @description Initialize the database
+     * @param dbAddress Address to connect to the database
      */
-    initDb(): mongoose.MongooseThenable{
+    initDb(dbAddress?: string): mongoose.MongooseThenable{
+        dbAddress = dbAddress || environment.db.url;
         mongoose.Promise = global.Promise;
-        return mongoose.connect(environment.db.url, {
+        return mongoose.connect(dbAddress, {
             useMongoClient: true
         }); 
     }
@@ -62,6 +66,24 @@ export class Server {
             catch(err){
                 reject(err);
             }
+        })
+    }
+
+    /**
+     * @author Lucas Vieira <lcssvieira@gmail.com>
+     * @description End the database connection
+     */
+    endDb() {
+        return mongoose.connection.close();
+    }
+
+     /**
+     * @author Lucas Vieira <lcssvieira@gmail.com>
+     * @description End the database connection
+     */
+    endApplication(){
+        this.application.close(() =>{
+            console.log('Server is closed');
         })
     }
 }
