@@ -31,6 +31,7 @@ Docker is used to run the application in "production mode" to guarantee it works
 
 [Postman collection](https://drive.google.com/open?id=1u0lVxX0jt-llWpftV_Tg6-XA3p_uNeA3)
 
+*Warning*: 'CreateNewRecord' should be the first 'request' from the Postman collection to be executed so you can get a valid 'user id' to use on the next ones
 
 # Running Integration Tests
 
