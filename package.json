@@ -26,7 +26,7 @@
     ]
   },
   "dependencies": {
-    "mongoose": "^4.13.9",
+    "mongoose": "^5.7.5",
     "restify": "6.3.4",
     "uuid": "^3.3.2"
   },
