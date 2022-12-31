@@ -35,9 +35,9 @@
     "@types/mongoose": "4.7.32",
     "@types/restify": "^5.0.8",
     "@types/supertest": "^2.0.4",
-    "jest": "^22.4.2",
+    "jest": "^29.3.1",
     "supertest": "^3.0.0",
-    "ts-jest": "^22.0.4",
+    "ts-jest": "^29.0.3",
     "typescript": "^2.6.2"
   }
 }
